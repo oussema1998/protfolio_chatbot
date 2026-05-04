@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import PyPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_community.vectorstores import Chroma
-from langchain_community.embeddings import HuggingFaceEmbeddings
+from langchain.embeddings import FastEmbedEmbeddings
 
 from langchain_groq import ChatGroq
 from langchain.chains import RetrievalQA
@@ -15,7 +15,7 @@ DB_DIR = "chroma_db"
 
 
 def load_or_create_db():
-    embeddings = HuggingFaceEmbeddings()
+    embeddings = FastEmbedEmbeddings()
 
     if os.path.exists(DB_DIR):
         db = Chroma(
