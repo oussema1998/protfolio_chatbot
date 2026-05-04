@@ -1,0 +1,20 @@
+# Environnement virtuel
+rag_env/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Secrets
+.env
+
+# Streamlit
+.streamlit/
+
+# OS files
+.DS_Store
+
+# Chroma DB (important)
+chroma_db/
+*.sqlite3
